@@ -15,6 +15,15 @@
     <maven.compiler.source>1.6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
   </properties>
+  
+  <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+            <outputDirectory>${dir}</outputDirectory>
+        </configuration>
+    </plugin>
 
   <dependencies>
     <dependency>
