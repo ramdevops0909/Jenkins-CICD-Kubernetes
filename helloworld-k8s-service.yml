@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: hello-world-k8s
-        image: jenkins-kubernetes:latest
+        image: jenkins-kubernetes:${BUILD_NUMBER}
         ports:
         - containerPort: 8080
         readinessProbe:
