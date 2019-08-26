@@ -37,7 +37,7 @@
 <mainClass>com.test.project.MavenEclipseProject.App</mainClass>
 </manifest>
 </archive>
-  <outputDirectory>/root/.m2/repository/</outputDirectory>
+  <outputDirectory>/root/.m2/repository/Jenkins-CICD-Kubernetes/target</outputDirectory>
         </configuration>
       </plugin>
  
