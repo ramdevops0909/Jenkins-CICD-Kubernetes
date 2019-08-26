@@ -20,8 +20,8 @@ spec:
     spec:
       containers:
       - name: hello-world-k8s
-        image: jenkins-kubernetes:${BUILD_NUMBER}
-        imagePullPolicy: Never
+        image: jenkins-kubernetes:$BUILD_NUMBER
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         readinessProbe:
@@ -36,6 +36,8 @@ spec:
             port: 8080
           initialDelaySeconds: 10
           timeoutSeconds: 1
+      imagePullSecrets:
+      - name: registry-secret
 ---
 kind: Service
 apiVersion: v1
