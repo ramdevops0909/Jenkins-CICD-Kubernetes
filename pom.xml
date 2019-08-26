@@ -32,9 +32,15 @@
         <artifactId>maven-jar-plugin</artifactId>
         <version>2.3.1</version>
         <configuration>
-          <outputDirectory>/root/.m2/repository/</outputDirectory>
+<archive>
+<manifest>
+<mainClass>com.test.project.MavenEclipseProject.App</mainClass>
+</manifest>
+</archive>
+  <outputDirectory>/root/.m2/repository/</outputDirectory>
         </configuration>
       </plugin>
+ 
     </plugins>
   </build>
   
