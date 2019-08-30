@@ -29,16 +29,16 @@ spec:
       imagePullSecrets:
       - name: registry-secret
 ---
-apiVersion: v1
 kind: Service
+apiVersion: v1
 metadata:
-  labels:
-  name: hello-world-k8s
+  name:  hello-world-k8s
 spec:
-  ports:
-  - name: "hello-world-k8s"
-    port: 8086
-    targetPort: 8080
   selector:
-status:
-  loadBalancer: {}
+    app:  hello-world-k8s
+  type:  NodePort
+  ports:
+  - name:  http
+    port:  8086
+    nodePort: 30001
+    protocol: TCP
