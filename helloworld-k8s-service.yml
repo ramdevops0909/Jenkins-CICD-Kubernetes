@@ -20,7 +20,9 @@ spec:
     spec:
       containers:
       - name: hello-world-k8s
-        image: jenkins-kubernetes:$BUILD_NUMBER
+        image: 10.142.0.5:5000/jenkins-kubernetes:$BUILD_NUMBER
+        command: [sh, -c, "sleep 1000"]
+        args: [ "while true; do sleep 30; done;" ]
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
