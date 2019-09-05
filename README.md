@@ -5,12 +5,12 @@ Using Jenkins Pipe line, I have performed following steps to achieve this requir
 
 ```
       	1) Created following Global Credentials in Jenkins Console
-				Github Credentials : For SCM checkout purpose
-				Docker-registry Credentials : For publishing the docker images to docker-registry (private registry)
-				Jenkins Credentials: Used for communication with docker
-				Kubeconfig Credentials : Used for communication with Kubernetes
+			Github Credentials : For SCM checkout purpose
+			Docker-registry Credentials : For publishing the docker images to docker-registry (private registry)
+			Jenkins Credentials: Used for communication with docker
+			Kubeconfig Credentials : Used for communication with Kubernetes
 	2) Created Jfrog Artifactory for storing the Jar files (Artifacts like jar, war etc...)
-		       Updated Jfrog required detais in Jenkins console (Manage Jenkins --> Configure System)
+		        Updated Jfrog required detais in Jenkins console (Manage Jenkins --> Configure System)
 			   serverid, URL and Jfrog credentials
 	3) Created the Dockerfile and dockerized the jenkins-cicd-k8s-0.0.1-SNAPSHOT.jar file
         4) Build the image and published the image into docker registry and removed unused docker  images
